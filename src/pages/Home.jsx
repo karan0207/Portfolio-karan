@@ -11,7 +11,7 @@ import Bird from '../models/Bird';
 import Plane from '../models/Plane';
 // import TempIsland from '../models/temp';
 // import { is } from '@react-three/fiber/dist/declarations/src/core/utils';
-import Boat from '../../../glb/Boat';
+// import Boat from '../../../glb/Boat';
 import sakura from '../assets/sakura.mp3';
 import terebhi from '../assets/terebhi.mp3';
 import audio from '../assets/audio.mp3';
