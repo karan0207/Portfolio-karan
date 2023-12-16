@@ -14,7 +14,7 @@ import Plane from '../models/Plane';
 import Boat from '../models/Boat';
 import sakura from '../assets/sakura.mp3';
 import terebhi from '../assets/terebhi.mp3';
-import audio from '../assets/audio.MP3';
+import audio from '../assets/audio.mp3';
 import { soundoff } from '../assets/icons';
 import { soundon } from '../assets/icons';
 
