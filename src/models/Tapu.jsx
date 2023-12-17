@@ -17,7 +17,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame,useThree } from "@react-three/fiber";
 import {a} from '@react-spring/three';
 
-import islandScene2 from '../glbfiles/low_poly_house.glb';
+import islandScene2 from '../assets/3d/low_poly_house.glb';
 
 const  Tapu=({isRotating,setIsRotating,setCurrentStage,...props})=> {
     const islandRef=useRef();
