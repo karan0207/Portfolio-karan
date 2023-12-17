@@ -24,7 +24,7 @@ const Home = () => {
 
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
-  const audioRef=useRef(new Audio(terebhi));
+  const audioRef=useRef(new Audio(sakura));
   audioRef.current.volume=0.6;
   audioRef.current.loop=true;
   const [isPlayingMusic,setIsPlayingMusic]=useState(false);

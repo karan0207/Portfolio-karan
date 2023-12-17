@@ -62,13 +62,23 @@ const  Tapu=({isRotating,setIsRotating,setCurrentStage,...props})=> {
       const delta = (clientX - lastX.current) / viewport.width;
 
       // Update the island's rotation based on the mouse/touch movement
-      islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+      if(window.innerWidth<768) {
+        islandRef.current.rotation.y += delta * 0.04 * Math.PI;
+       }
+      else islandRef.current.rotation.y += delta * 0.01 * Math.PI;
 
       // Update the reference for the last clientX position
       lastX.current = clientX;
 
       // Update the rotation speed
-      rotationSpeed.current = delta * 0.01 * Math.PI;
+      // rotationSpeed.current = delta * 0.01 * Math.PI;
+     if(window.innerWidth<768) {
+      rotationSpeed.current = delta * 0.1 * Math.PI;
+     }
+     else {
+       rotationSpeed.current = delta * 0.01 * Math.PI;
+     }
+      
     }
   };
 
@@ -79,11 +89,13 @@ const  Tapu=({isRotating,setIsRotating,setCurrentStage,...props})=> {
 
       islandRef.current.rotation.y += 0.005 * Math.PI;
       rotationSpeed.current = 0.0125;
+     
     } else if (event.key === "ArrowRight") {
       if (!isRotating) setIsRotating(true);
 
       islandRef.current.rotation.y -= 0.005 * Math.PI;
       rotationSpeed.current = -0.0125;
+   
     }
   };
 
