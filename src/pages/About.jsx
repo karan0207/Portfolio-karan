@@ -39,7 +39,7 @@ const About = () => {
 
   ))} */}
           {skills?.map((skill) => (
-            <div className="block-container w-20 h-20">
+            <div className="block-container w-20 h-20" key={skill.name}>
               <div className="btn-black rounded-xl" />
               <div className="btn-front rounded-xl flex justify-center items-center">
                 <img

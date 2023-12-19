@@ -1,10 +1,6 @@
-
-
-
-
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 
 import  Fox  from "../models/Fox";
 import useAlert from "../hooks/useAlert";
@@ -12,17 +8,23 @@ import { Alert, Loader } from "../components/index.js";
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ user_name: '',
+  user_email: '',
+  message: '',});
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
 
-  const handleChange = ({ target: { name, value } }) => {
-    setForm({ ...form, [name]: value });
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleFocus = () => setCurrentAnimation("walk");
   const handleBlur = () => setCurrentAnimation("idle");
+
+//   useEffect(()=>{
+// console.log( import.meta.env.EMAILJS_SERVICE_ID)
+//   },[])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,17 +32,8 @@ const Contact = () => {
     setCurrentAnimation("hit");
 
     emailjs
-      .send(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Karan",
-          from_email: form.email,
-          to_email: "karanchandel0202k@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.EMAILJS_PUBLIC_KEY
+      .sendForm("service_mkwbr5s","template_6w8q399",formRef.current,"bAFQjZFf6CaK91aBS"
+    
       )
       .then(
         () => {
@@ -55,9 +48,9 @@ const Contact = () => {
             hideAlert(false);
             setCurrentAnimation("idle");
             setForm({
-              name: "",
-              email: "",
-              message: "",
+              user_name: '',
+              user_email: '',
+              message: ''
             });
           }, [3000]);
         },
@@ -91,11 +84,11 @@ const Contact = () => {
             Name
             <input
               type='text'
-              name='name'
+              name='user_name'
               className='input'
               placeholder='John'
               required
-              value={form.name}
+              value={form.user_name}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
@@ -105,11 +98,11 @@ const Contact = () => {
             Email
             <input
               type='email'
-              name='email'
+              name="user_email"
               className='input'
               placeholder='John@gmail.com'
               required
-              value={form.email}
+              value={form.user_email}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
@@ -118,7 +111,7 @@ const Contact = () => {
           <label className='text-black-500 font-semibold'>
             Your Message
             <textarea
-              name='message'
+             name="message"
               rows='4'
               className='textarea'
               placeholder='Write your thoughts here...'
@@ -131,6 +124,7 @@ const Contact = () => {
 
           <button
             type='submit'
+            value="Send"
             disabled={loading}
             className='btn'
             onFocus={handleFocus}
@@ -175,3 +169,20 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

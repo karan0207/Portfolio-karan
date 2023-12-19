@@ -24,7 +24,7 @@ const HomeInfo = ({ currentStage }) => {
           Worked with Esports startup <br /> and picked up many skills along the way
         </p>
 
-        <Link to='/about' className='neo-brutalism-white neo-btn'>
+        <Link to='/Portfolio-karan/about' className='neo-brutalism-white neo-btn'>
           Learn more
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>
@@ -39,7 +39,7 @@ const HomeInfo = ({ currentStage }) => {
           Worked on multiple projects to success over the months. <br /> Curious about the outcome?
         </p>
 
-        <Link to='/projects' className='neo-brutalism-white neo-btn'>
+        <Link to='/Portfolio-karan/projects' className='neo-brutalism-white neo-btn'>
           Visit my portfolio
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>
@@ -54,7 +54,7 @@ const HomeInfo = ({ currentStage }) => {
         Need a project done or looking for a dev? <br/> I'm just a few keystrokes away
       </p>
 
-      <Link to='/contact' className='neo-brutalism-white neo-btn'>
+      <Link to='/Portfolio-karan/contact' className='neo-brutalism-white neo-btn'>
         Let's talk
         <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
       </Link>
