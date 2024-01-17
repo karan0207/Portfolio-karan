@@ -116,7 +116,7 @@ export const experiences = [
         company_name: "GGtoor INC",
         icon: ggtoor,
         iconBg: "#accbe1",
-        date: "Jan 2023 - June 2023",
+        date: "Jul 2023 - Dec 2023",
         points: [
             "Developing and maintaining web dashboard using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -125,16 +125,17 @@ export const experiences = [
         ],
     },
     {
-        title: "Esports tournament Organizer",
+        title: "Esports tournament Organizer|Frontend intern",
         company_name: "HighPower E-Sports",
         icon: hp,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Oct 2022",
+        date: "Aug 2021 - Dec 2022",
         points: [
             "Technical assitance on Developing and maintaining tournament schedule and dashboard for registrations.",
             "Collaborating with moderators to execute the event.",
             "Implementing brackets for multiple modes of tournaments.",
             "Event Summary and Prize-pool distribution among winners.",
+            "Implementing new UI adn layout features on official website.",
         ],
     },
     // {
